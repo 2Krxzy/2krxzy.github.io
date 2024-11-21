@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+				<html>
+				<head>
+					<meta charset="utf-8">
+					<title>Rocket Soccer Derby</title>
+					<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+					<meta name="description" content="Buckle up for Rocket Soccer Derby - the ultimate fusion of soccer, vehicular mayhem, and strategic simulation! Strap into your tricked-out ride and prepare to dominate the pitch like never before.In this high-octane mashup, youll zip around the field, weaving through opponents and unleashing jaw-dropping shots to light up the scoreboard. Whether youre in the mood for a quick adrenaline rush or a prolonged campaign, Rocket Soccer Derby delivers.
+
+But the real thrill lies in the Rocket League – an epic competition where skill meets customization. Each victory nets you cold, hard in-game cash and precious cogs to transform your ride into an unstoppable force. Start your journey in the Beginners League and work your way up, leaving a trail of stunned opponents in your wake.
+
+With the Intermediate and Expert Leagues beckoning, only the bold and the relentless will reign supreme. Upgrade your way to glory, honing your skills and fine-tuning your machine until youre an undisputed champion. Are you ready to conquer the pitch and claim your place among the Rocket Soccer Derby legends? Start your engines and prepare for an adrenaline-fueled adventure like no other!">
+					<link rel="stylesheet" type="text/css" href="https://cpsgames.org/content/themes/cpsgames/css/style.css" />
+					<style type="text/css">
+						body {
+						    color: #eee;
+						    position: inherit;
+						    margin: 0;
+						    padding: 0;
+						    overflow: hidden;
+						    height: 100%;
+						    background: #000;
+						}
+						#splash-game-content {
+						    position: absolute;
+						    top: 0;
+						    left: 0;
+						    width: 0;
+						    height: 0;
+						    overflow: hidden;
+						    max-width: 100%;
+						    max-height: 100%;
+						    min-width: 100%;
+						    min-height: 100%;
+						    box-sizing: border-box;
+						}
+						.splash {
+						    background: linear-gradient(-45deg,#7887db,#e86195);
+						    position: absolute;
+							top: 0;
+							left: 0;
+							bottom: 0;
+							width: 100%;
+							z-index: 1;
+						}
+						.splash-content {
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							z-index: 2;
+							transform: translate(-50%, -50%);
+						}
+						.splash-content img {
+							width: 180px;
+							height: auto;
+							border: 2px solid #fff;
+							border-radius: 8px;
+						}
+						.btn-play {
+							width: 184px;
+							height: 60px;
+							font-size: 20px;
+							font-weight: bold;
+							margin-top: 15px;
+							background: rgba(255, 255, 255, 0.8);
+							border: none;
+							border-radius: 40px;
+						}
+						.btn-play:hover {
+							cursor: pointer;
+						}
+						.splash-game-title {
+							position: absolute;
+							top: 95%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							font-size: 20px;
+						}
+					</style>
+				</head>
+				<body>
+					<div class="splash" id="splash">
+						<div class="splash-content">
+							<div class="splash-thumbnail">
+								<img src="/thumbs/rocket-soccer-derby_2.webp">
+							</div>
+							<button class="btn-play" onclick="play_game()">Play</button>
+						</div>
+						<div class="splash-game-title">Rocket Soccer Derby</div>
+					</div>
+					<iframe id="splash-game-content" frameborder="0" allow="autoplay" allowfullscreen="" seamless="" scrolling="no" data-src="https://lolygames.github.io/rocket-soccer-derby/"></iframe>
+					<script type="text/javascript">
+						// previously on head <script type="text/javascript" src="/js/api.js"><\/script>
+						function play_game(){
+							document.getElementById("splash").remove();
+							// show_ad_on_splash temporary disable for new Ads Manager plugin
+														document.getElementById("splash-game-content").src = document.getElementById("splash-game-content").dataset.src;
+						}
+						// ca_api.on_ad_closed = ()=>{
+						// 	//
+						// }
+					</script>
+				</body>
+				</html>
