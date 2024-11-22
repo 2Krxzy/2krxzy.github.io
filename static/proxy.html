@@ -8,6 +8,21 @@
         body {
             font-family: 'Roboto', sans-serif;
         }
+        @keyframes rainbow {
+            0% { border-color: red; }
+            14% { border-color: orange; }
+            28% { border-color: yellow; }
+            42% { border-color: green; }
+            57% { border-color: blue; }
+            71% { border-color: indigo; }
+            85% { border-color: violet; }
+            100% { border-color: red; }
+        }
+        .rainbow-border {
+            border-width: 2px;
+            border-style: solid;
+            animation: rainbow 2s infinite;
+        }
     </style>
 </head>
 <body class="bg-black text-purple-500">
@@ -45,46 +60,28 @@
         </section>
     </main>
 
-<!-- PROXY DO NOT TOUCH PLEASE -->
-<form id="uv-form"">
+    <!-- PROXY DO NOT TOUCH PLEASE -->
+    <div class="flex justify-center items-center h-screen">
+        <form id="uv-form" class="w-full max-w-md">
             <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
-            <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input"/>
-          </form>
-          <div class="desc left-margin">
-            <p id="uv-error"></p>
-            <pre id="uv-error-code"></pre>
-          </div>
-         <a href="https://discord.gg/zJhPJYJCeJ" target="_blank" class="fa-brands fa-discord"></a>
-         <a href="https://github.com/TheTIW/UV-Static" target="_blank"class="fa-brands fa-github"></a>
-         <a href="https://starttiw.org" target="_blank"class="fa-solid fa-cloud"></a>
-      </div>
-      <script src="uv/uv.bundle.js" defer></script>
-      <script src="uv/uv.config.js" defer></script>
-      <script src="register-sw.js" defer></script>
-      <script src="search.js" defer></script>
-      <script src="index.js" defer></script>
-      <script src="error.js" defer></script>
-<!-- PROXY DO NOT TOUCH PLEASE -->
+            <input id="uv-address" type="text" placeholder="Type in URLS ONLY!" class="form__input w-full p-2 rounded-full rainbow-border"/>
+        </form>
+    </div>
+    <div class="desc left-margin">
+        <p id="uv-error"></p>
+        <pre id="uv-error-code"></pre>
+    </div>
+    <div class="flex justify-center space-x-4 mt-4">
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+    </div>
+    <script src="https://2krxzy.github.io/static/uv/uv.bundle.js" defer></script>
+    <script src="https://2krxzy.github.io/static/uv/uv.config.js" defer></script>
+    <script src="https://2krxzy.github.io/static/register-sw.js" defer></script>
+    <script src="https://2krxzy.github.io/static/search.js" defer></script>
+    <script src="https://2krxzy.github.io/static/index.js" defer></script>
+    <script src="https://2krxzy.github.io/static/error.js" defer></script>
+    <!-- PROXY DO NOT TOUCH PLEASE -->
+
     <footer class="bg-purple-900 p-4 mt-8">
         <div class="container mx-auto text-center">
             <p class="text-purple-300">© 2023 Tapez. All rights reserved.</p>
